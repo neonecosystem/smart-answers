@@ -19,13 +19,17 @@ class FlowRegistrationPresenter
     start_node.title
   end
 
+  # # # # # # #
+  # We no longer want Panopticon registering routes
+  # # # # # # #
   def paths
-    ["/#{@flow.name}.json"]
+    []
   end
 
   def prefixes
-    ["/#{@flow.name}"]
+    []
   end
+  # # # # # # #
 
   def description
     start_node.meta_description
